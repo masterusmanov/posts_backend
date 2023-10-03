@@ -10,8 +10,4 @@ export class UpdatePostDto {
     @ApiProperty({ example: 'Refrigerator', description: 'Description'})
     @IsString()
     readonly content?: string;
-
-    @ApiProperty({ example: 'Image Link', description: 'http//...'})
-    @IsString()
-    readonly image_link?: string;
 }

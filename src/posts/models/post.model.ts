@@ -4,7 +4,6 @@ interface PostCreateAttr{
     title: string;
     content: string;
     image: string;
-    image_link: string;
 }
 
 @Table({tableName: 'posts'})
@@ -23,7 +22,7 @@ export class Post extends Model<Post, PostCreateAttr>{
     title: string;
 
     @Column({
-        type: DataType.STRING
+        type: DataType.TEXT,
     })
     content: string;
 
@@ -31,11 +30,4 @@ export class Post extends Model<Post, PostCreateAttr>{
         type: DataType.STRING,
     })
     image: string;
-
-    @Column({
-        type: DataType.STRING,
-    })
-    image_link: string;
-
-
 }
